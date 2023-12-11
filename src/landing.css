@@ -9,7 +9,7 @@
 
 .landing__side  {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px 25px;
     border-right: 1px solid grey;
     font-family: 'Jura', sans-serif;
     display: flex;
@@ -24,20 +24,34 @@
 
 }
 
+.landing__main {
+    overflow: auto;
+}
+
 .landing__content {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     box-sizing: border-box;
-    padding: 0 5%;
+    padding: 0 15%;
 }
 
 .landing__content-action {
     text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 54px);
+    position: relative;
 }
 
 .landing__content-action h1 {
     margin: 0 0 25px 0;
+}
+
+.landing__content-action-text p {
+    max-width: 480px;
+    line-height: 1.5;
 }
 
 .landing__content-action button {
@@ -49,14 +63,28 @@
     color: white;
     min-width: 160px;
     border: 2px solid white;
-    padding: 15px;
+    padding: 10px  15px;
     box-sizing: border-box;
+    margin: 25px 0 0 0;
 }
 
 .landing__content-action button p {
     margin: 0;
+    max-width: 540px;
+    line-height: 1.5;
 }
 
 .landing__content-action button img {
     max-width: 25px;
+}
+
+.landing__content-action-index {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin: 0;
+    position: absolute;
+    right: -15%;
+    top: 15%;
+    font-size: 180px;
+    line-height: 1;
 }
