@@ -4,12 +4,17 @@ import arrowPng from "./assets/arrowWhite.png";
 import Spline from '@splinetool/react-spline';
 import "./landing.css";
 
+import { candles } from "./utils";
+
 export default function Landing() {
     const candlesRef = React.useRef();
 
-    // React.useEffect(() => {
-    //     console.log(candlesRef.current);
-    // }, []);
+    //states
+    const [candleIndex, setCandleIndex] = React.useState(0);
+
+    React.useEffect(() => {
+        console.log(candleIndex);
+    }, [candleIndex]);
 
     return (
         <section className="landing">
@@ -30,19 +35,25 @@ export default function Landing() {
                     <div className='landing__content-action'>
                         <h1>Волшебные свечи для волшебной <span>атмосферы</span></h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum voluptate, sed mollitia dolore est maxime sint, eveniet fuga illo excepturi ipsa laudantium optio assumenda labore facere quia nesciunt quae aperiam!</p>
-                        <div>
-                            <button>
+                        <div className="landing__content-action-btns">
+                            <button className="landing__content-action-btns-order">
                                 <p>Заказать</p>
                                 <img src={arrowPng}></img>
                             </button>
-                            <div>
-                                <button onClick={() => {
+                            <div className="landing__content-action-btns-nav">
+                                <button style={{rotate: "-180deg"}} className="landing__content-action-btns-nav-prev" onClick={() => {
                                     candlesRef.current.scroll({top: 0, left: -candlesRef.current.clientWidth, behavior: "smooth"})
+                                    setCandleIndex((prevValue) => {
+                                        return prevValue === 0 ? 0 : prevValue - 1;
+                                    })
                                 }}>
                                     <img src={arrowPng}></img>
                                 </button>
-                                <button onClick={() => {
+                                <button className="landing__content-action-btns-nav-next" onClick={() => {
                                     candlesRef.current.scroll({top: 0, left: candlesRef.current.clientWidth, behavior: "smooth"});
+                                    setCandleIndex((prevValue) => {
+                                        return prevValue === candles.length - 1 ? candles.length -1 : prevValue + 1;
+                                    })
                                 }}>
                                     <img src={arrowPng}></img>
                                 </button>
@@ -50,19 +61,23 @@ export default function Landing() {
                         </div>
 
                     </div>
-                    {/* <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' /> */}
                     <div className='landing__content-carousel'>
                         <ul ref={candlesRef} className='landing__content-carousel-ul'>
-                            <li key="0">
+                            {candles.map((candle, index) => {
+                                return <li key={index}>
+                                    <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' />
+                                </li>
+                            })}
+                            {/* <li key="0">
                                 <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' />
                             </li>
                             <li key="1">
                                 <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' />
-                            </li>
+                            </li> */}
                         </ul>
                         <div className='landing__content-carousel-stats'>
                             <p>
-                                <span id='current-candle'>01</span>|<span>06</span>
+                                <span id='current-candle'>{candleIndex + 1}</span>|<span>{candles.length}</span>
                             </p>
                             {/* <div className=''>
                                 <div></div>
