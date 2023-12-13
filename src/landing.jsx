@@ -1,10 +1,16 @@
-// import React from "react";
+import React from "react";
 import Header from './Header'
 import arrowPng from "./assets/arrowWhite.png";
 import Spline from '@splinetool/react-spline';
 import "./landing.css";
 
 export default function Landing() {
+    const candlesRef = React.useRef();
+
+    // React.useEffect(() => {
+    //     console.log(candlesRef.current);
+    // }, []);
+
     return (
         <section className="landing">
             <div className="landing__side">
@@ -30,11 +36,15 @@ export default function Landing() {
                                 <img src={arrowPng}></img>
                             </button>
                             <div>
-                                <button>
-                                    <p>Назад</p>
+                                <button onClick={() => {
+                                    candlesRef.current.scroll({top: 0, left: -candlesRef.current.clientWidth, behavior: "smooth"})
+                                }}>
+                                    <img src={arrowPng}></img>
                                 </button>
-                                <button>
-                                    <p>Вперед</p>
+                                <button onClick={() => {
+                                    candlesRef.current.scroll({top: 0, left: candlesRef.current.clientWidth, behavior: "smooth"});
+                                }}>
+                                    <img src={arrowPng}></img>
                                 </button>
                             </div>
                         </div>
@@ -42,7 +52,7 @@ export default function Landing() {
                     </div>
                     {/* <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' /> */}
                     <div className='landing__content-carousel'>
-                        <ul className='landing__content-carousel-ul'>
+                        <ul ref={candlesRef} className='landing__content-carousel-ul'>
                             <li key="0">
                                 <Spline scene='https://prod.spline.design/2ThHoVQiJBBz1cOY/scene.splinecode' />
                             </li>
