@@ -1,12 +1,12 @@
 // import React from 'react'
 import './App.css'
-import Landing from './landing'
+import Home from './Home'
 // const Landing = 
 function App() {
   return (
     <>
       {/* <Header /> */}
-      <Landing></Landing>
+      <Home />
     </>
   )
 }

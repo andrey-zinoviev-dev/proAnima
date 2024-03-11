@@ -1,14 +1,27 @@
 .header {
   position: sticky;
   top: 0px;
-  background-color: rgb(0, 0, 0, 0.75);
+  /* background-color: rgb(0, 0, 0, 0.75); */
+  /* background-color: #333336; */
   backdrop-filter: blur(4px);
+  color: #213547;
+  box-sizing: border-box;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .header ul {
   margin: 0;
   list-style: none;
-  padding: 15px 10%;
+  /* padding: 2% 10%; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
