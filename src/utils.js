@@ -42,3 +42,18 @@ export const goods = [
         cover: good6,
     }
 ]
+
+export const categories = [
+    {
+        name: "Свечи",
+        cover: good1,
+    },
+    {
+        name: "Саше",
+        cover: good6,
+    },
+    {
+        name: "Мужские товары",
+        cover: good4
+    }
+]

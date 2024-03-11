@@ -1,8 +1,8 @@
 import React from "react";
-
-export default function Landing({ children }) {
+ 
+export default function Landing({children}) {
     return (
-        <div>
+        <div className="main__content">
             {children}
         </div>
     )

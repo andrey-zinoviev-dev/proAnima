@@ -1,16 +1,17 @@
-import React from "react";
+// import React from "react";
 import Header from './Header'
-import arrowPng from "./assets/arrowWhite.png";
-import Spline from '@splinetool/react-spline';
+// import arrowPng from "./assets/arrowWhite.png";
+// import Spline from '@splinetool/react-spline';
 import "./Home.css";
 
-import { candles, goods } from "./utils";
-import Good from "./Good";
+// import { candles, goods } from "./utils";
+// import Good from "./Good";
 import Categories from "./Categories";
-import Landing from "./Landing";
+import Landing from "./landing";
+import Starter from './Starter';
 import Goods from "./Goods";
 export default function Home() {
-    const candlesRef = React.useRef();
+    // const candlesRef = React.useRef();
 
     //states
     // const [candleIndex, setCandleIndex] = React.useState(0);
@@ -23,18 +24,17 @@ export default function Home() {
         <>
             <Header></Header>
             <main className="main">
-                <section className="main__side">
+                {/* <section className="main__side">
                     <ul className="main__side-ul">
                         <li className="main__side-ul-li">ВК</li>
                         <li className="main__side-ul-li">ТГ</li>
                         <li className="main__side-ul-li">YT</li>
                     </ul>
-                </section>
+                </section> */}
                 <Landing>
-                    <h1>Волшебные свечи для волшебной <span>атмосферы</span></h1>
-                    
+                    <Starter />
                     <Categories />
-                    <Goods goods={goods} />
+                    <Goods />
                 </Landing>
                 {/* <section className="landing"> */}
                 {/* <div className="landing__side">

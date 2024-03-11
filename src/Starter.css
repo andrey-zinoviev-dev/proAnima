@@ -1,0 +1,41 @@
+.padding_large { 
+  padding: 5% 15%;
+}
+
+.start {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f0f1f5;
+  box-sizing: border-box; 
+}
+
+.start__text {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.start__headline {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.start img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.start__order-btn {
+  background-color: transparent;
+    color: #413f3f;
+    border: 2px solid #413f3f;
+    width: 160px;
+    height: 45px;
+    border-radius: 2px;
+}

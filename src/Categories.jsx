@@ -1,9 +1,18 @@
-import React from "react";
+import { categories } from "./utils";
 
 export default function Categories() {
     return (
         <section>
-            <div>
+            <h2>Что Вас может заинтересовать</h2>
+            <ul>
+                {categories.map((category) => {
+                    return <li key={category.name}>
+                        <h3>{category.name}</h3>
+                        <img src={category.cover} />
+                    </li>
+                })}
+            </ul>
+            {/* <div>
                 <h3>Свечи</h3>
             </div>
             <div>
@@ -11,7 +20,7 @@ export default function Categories() {
             </div>
             <div>
                 <h3>Подарочные упаковки</h3>
-            </div>
+            </div> */}
         </section>
     )
 }
