@@ -21,10 +21,15 @@
 .header ul {
   margin: 0;
   list-style: none;
-  /* padding: 2% 10%; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
   gap: 25px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header ul {
+    padding: 15px;
+  }
 }

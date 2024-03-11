@@ -54,7 +54,7 @@
 .landing__side ul {
     padding: 0;
     list-style: none;
-
+    margin: 0;
 }
 
 .landing__main {
@@ -70,10 +70,12 @@
     justify-content: space-between;
     align-items: center; */
     box-sizing: border-box;
-    padding: 10%;
+    /* padding: 10%; */
+    padding: 5%;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    gap: 50px;
     height: calc(100% - 54px);
 }
 
@@ -120,7 +122,7 @@
     /* border-radius: 24px; */
     border-radius: 0;
     gap: 25px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     box-sizing: border-box;
     /* margin: 25px 0 0 0; */
 }
@@ -134,7 +136,7 @@
 
 .landing__content-action-btns-nav {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 15px;
 }
@@ -165,9 +167,9 @@
 }
 
 .landing__content-carousel {
-    /* width: 100%; */
+    width: 100%;
     /* max-width: 50%; */
-    width: 50%;
+    /* width: 50%; */
     max-width: 540px;
     display: flex;
     flex-direction: column;
@@ -260,5 +262,45 @@
 
     .landing__content-action h1 {
         font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .landing__content-action {
+        max-width: 480px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .landing__side {
+        padding: 15px 15px 30px 15px;
+    }
+    .landing__content {
+        padding: 30px 15px;
+    }
+    .landing__content-action h1 {
+        font-size: 2.5em;
+    }
+    .landing__content-action p {
+        font-size: 16px;
+    }
+    .landing__content-action-btns {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .landing__content {
+        padding: 20px;
+        gap: 15px;
+    }
+    .landing__content-action-btns {
+        justify-content: flex-start;
+    }
+    .landing__content-action button {
+        padding: 10px;
+    }
+    .landing__side {
+        display: none;
     }
 }
