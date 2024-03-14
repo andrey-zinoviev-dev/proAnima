@@ -1,0 +1,33 @@
+.categories {
+  box-sizing: border-box;
+  padding: 5% 15%;
+}
+
+.categories h2 {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.categories__ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  padding: 0;
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  gap: 15px;
+}
+
+.categories__ul-li {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.categories__ul-li img {
+  width: 100%;
+  height: calc(100% - 28px);
+  /* max-height: 860px; */
+}

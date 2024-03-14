@@ -1,14 +1,15 @@
 import { categories } from "./utils";
+import "./Categories.css";
 
 export default function Categories() {
     return (
-        <section>
+        <section className="categories">
             <h2>Что Вас может заинтересовать</h2>
-            <ul>
+            <ul className="categories__ul">
                 {categories.map((category) => {
-                    return <li key={category.name}>
+                    return <li className="categories__ul-li" key={category.name}>
                         <h3>{category.name}</h3>
-                        <img src={category.cover} />
+                        <img className="categories__ul-li-img" src={category.cover} />
                     </li>
                 })}
             </ul>
