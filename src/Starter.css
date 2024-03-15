@@ -38,4 +38,17 @@
     width: 160px;
     height: 45px;
     border-radius: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.25s ease-in-out;
+}
+
+.start__order-btn p {
+  line-height: 1;
+}
+
+.start__order-btn:hover {
+  background-color: #f9a581;
+  border: 2px solid #f9a581;
+  color: white;
 }
