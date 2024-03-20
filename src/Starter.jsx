@@ -1,4 +1,4 @@
-import welcomePic from "./assets/_DSC3731.jpg";
+import welcomePic from "./assets/1.png";
 import "./Starter.css";
 
 export default function Starter() {

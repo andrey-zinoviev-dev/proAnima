@@ -1,6 +1,6 @@
 .categories {
   box-sizing: border-box;
-  padding: 5% 15%;
+  /* padding: 5% 15%; */
 }
 
 .categories h2 {
@@ -22,12 +22,20 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
   gap: 25px;
+  background-color: #c2c2c3;
+    /* background-image: url(/src/assets/1.png); */
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: 140% 50%;
+    border-radius: 12px;
+  height: 180px;
+  box-sizing: border-box;
+  padding: 10px 20px;
 }
 
-.categories__ul-li img {
-  width: 100%;
-  height: calc(100% - 28px);
-  /* max-height: 860px; */
+.categories__ul-li h3 {
+  font-size: 16px;
+  max-width: 120px;
 }
