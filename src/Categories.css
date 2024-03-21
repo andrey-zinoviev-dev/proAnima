@@ -21,10 +21,10 @@
 .categories__ul-li {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: center;
   gap: 25px;
-  background-color: #c2c2c3;
+  /* background-color: #c2c2c3; */
     /* background-image: url(/src/assets/1.png); */
     background-size: 65%;
     background-repeat: no-repeat;
@@ -33,9 +33,29 @@
   height: 180px;
   box-sizing: border-box;
   padding: 10px 20px;
+  /* border: 2px solid #c2c2c3; */
+  background-color: #f0f1f5;
 }
 
 .categories__ul-li h3 {
   font-size: 16px;
   max-width: 120px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.categories__ul-li button {
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.categories__ul-li-svg {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
 }

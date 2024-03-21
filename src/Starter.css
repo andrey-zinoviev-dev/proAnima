@@ -6,8 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #f0f1f5;
+  /* background-color: #f0f1f5; */
   box-sizing: border-box; 
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 .start__text {

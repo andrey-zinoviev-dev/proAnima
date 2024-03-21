@@ -9,7 +9,7 @@ import "./Home.css";
 import Categories from "./Categories";
 import Landing from "./landing";
 import Starter from './Starter';
-import Goods from "./Goods";
+import Candles from './Candles';
 export default function Home() {
     // const candlesRef = React.useRef();
 
@@ -34,7 +34,7 @@ export default function Home() {
                 <Landing>
                     <Starter />
                     <Categories />
-                    <Goods />
+                    <Candles />
                 </Landing>
                 {/* <section className="landing"> */}
                 {/* <div className="landing__side">

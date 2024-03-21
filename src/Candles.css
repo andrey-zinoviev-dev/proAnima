@@ -1,0 +1,25 @@
+.landing__candles-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  gap: 15px;
+}
+
+.landing__candles-ul li {
+  display: flex;
+}
+
+.landing__candles-ul li article {
+  background-color: #f0f1f5;
+  padding: 0px 30px 30px 30px;
+}
+
+.landing__candles-ul li article h3 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}

@@ -12,7 +12,7 @@ export default function Categories() {
                         <h3>{category.name}</h3>
                         <button>
                             <p>Открыть коллекцию</p>
-                            <FontAwesomeIcon style={{rotate: "-45deg"}} icon={faArrowRight} />
+                            <FontAwesomeIcon className="categories__ul-li-svg" style={{rotate: "-45deg"}} icon={faArrowRight} />
                         </button>
                         {/* <img className="categories__ul-li-img" src={category.cover} /> */}
                     </li>
