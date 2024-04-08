@@ -49,7 +49,9 @@
 }
 
 .start__order-btn:hover {
-  background-color: #f9a581;
-  border: 2px solid #f9a581;
+  /* background-color: #f9a581; */
+  /* border: 2px solid #f9a581; */
+  background-color: #895330;
+  border: 2px solid #895330;
   color: white;
 }

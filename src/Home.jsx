@@ -10,6 +10,7 @@ import Categories from "./Categories";
 import Landing from "./landing";
 import Starter from './Starter';
 import Candles from './Candles';
+import Process from './Process';
 export default function Home() {
     // const candlesRef = React.useRef();
 
@@ -35,6 +36,7 @@ export default function Home() {
                     <Starter />
                     <Categories />
                     <Candles />
+                    <Process />
                 </Landing>
                 {/* <section className="landing"> */}
                 {/* <div className="landing__side">
