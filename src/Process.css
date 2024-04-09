@@ -1,0 +1,37 @@
+.process__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.process__wrapper img {
+  width: 50%;
+  border-radius: 9px;
+}
+
+.process__wrapper-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.process__wrapper-text h2 {
+  margin: 0;
+  line-height: 1;
+}
+
+.process__p {
+  font-weight: 300;
+}
+
+.process__p-span {
+  color: #646cff;
+}
+
+.process__video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}

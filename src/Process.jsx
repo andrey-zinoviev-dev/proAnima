@@ -1,16 +1,29 @@
+import "./Process.css";
 import process from "./assets/process.jpg";
 import video from "./assets/IMG_1482.MOV"
 export default function Process () {
     return (
-        <section>
-            <h2>Как создаются свечи?</h2>
-            <img src={process}></img>
-            <p>В процессе создания наших свечей мы используем только высококачественные ингредиенты, что гарантирует их безупречное качество и безопасность для здоровья.
-                Воск используется соевый-  это гипоаллергенный и экологически чистый материал, который не выделяет вредных веществ.
-                Натуральные масла, используемые в создании ароматов, успокаивают нервную систему, создают уют дома, а также наполняют дом приятным ароматом. 
-            </p>
+        <section className="process">
+            <div className="process__wrapper">
+                <img className="process__wrapper-img" src={process}></img>
+                <div className="process__wrapper-text">
+                    <h2 className="process__headline">Как создаются свечи?</h2>
+                    <p className="process__p">
+                        В процессе создания наших свечей мы используем только высококачественные ингредиенты, что гарантирует их <span className="process__p-span">безупречное качество</span> и <span className="process__p-span">безопасность</span> для здоровья.
+                    </p>
+                    <p className="process__p">
+                        Воск используется соевый-  это <span className="process__p-span">гипоаллергенный</span> и экологически чистый материал, который не выделяет вредных веществ.
+                    </p>
+                    <p className="process__p">
+                        Натуральные масла, используемые в создании ароматов, <span className="process__p-span">успокаивают</span> нервную систему, создают уют дома, а также наполняют дом <span className="process__p-span" >приятным</span> ароматом. 
+                    </p>
+                    <button className="process__button">Изучить</button>
+                </div>
+
+            </div>
+
             <h3>Процесс создания свечей</h3>
-            <video src={video} controls muted></video>
+            <video className="process__video" src={video} controls muted></video>
         </section>
     )
-};
+}
