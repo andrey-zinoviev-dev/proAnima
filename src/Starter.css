@@ -11,6 +11,12 @@
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+.start__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 .start__text {
   max-width: 450px;
   display: flex;

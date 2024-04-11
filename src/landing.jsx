@@ -2,8 +2,8 @@ import React from "react";
  
 export default function Landing({children}) {
     return (
-        <div className="main__content">
+        <main className="main">
             {children}
-        </div>
+        </main>
     )
 }
