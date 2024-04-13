@@ -99,6 +99,12 @@ section {
   }
 }
 
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
 /* @media screen and (max-width: 1439px) {
   section {
     padding: 5% 15%;

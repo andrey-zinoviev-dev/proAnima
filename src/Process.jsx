@@ -18,7 +18,7 @@ export default function Process () {
                         <p className="process__p">
                             Натуральные масла, используемые в создании ароматов, <span className="process__p-span">успокаивают</span> нервную систему, создают уют дома, а также наполняют дом <span className="process__p-span" >приятным</span> ароматом. 
                         </p>
-                        <button className="process__button">Изучить</button>
+                        <a target="_blank" href="https://t.me/satiseyunova" className="process__button">Изучить</a>
                     </div>
 
                 </div>

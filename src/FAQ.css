@@ -1,0 +1,56 @@
+.faq h2 {
+    line-height: 1.3;
+    max-width: 210px;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+}
+.faq__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 75px;
+}
+.faq__wrapper-ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+    box-sizing: border-box;
+}
+.faq__wrapper-ul-li-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid grey;
+    background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+    /* padding: 0; */
+}
+
+.faq__wrapper-ul-li-button:hover {
+    /* border: none; */
+    /* border: 2px solid transparent; */
+    border-bottom: 2px solid #895330;
+    /* outline: none; */
+}
+
+.faq__wrapper-ul-li-button h3 {
+    margin: 0;
+}
+
+.faq__wrapper-ul-li-div-circle {
+    width: 5px;
+    height: 5px;
+    background-color: #895330;
+    border-radius: 51%;
+}
