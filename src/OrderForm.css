@@ -1,0 +1,26 @@
+.order__wrapper {
+        /* display: flex; */
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 1vw; */
+        /* border-radius: 12px; */
+        background-color: #f0f1f5;
+        box-sizing: border-box;
+        /* padding: 25px; */
+        border-radius: 5px;
+        overflow: hidden;
+}
+
+.order__wrapper img {
+    width: 100%;
+}
+
+.order__wrapper  form {
+    box-sizing: border-box;
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

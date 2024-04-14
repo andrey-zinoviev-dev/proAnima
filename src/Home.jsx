@@ -15,6 +15,7 @@ import Footer from './Footer';
 import Reviews from './Reviews';
 import LastAction from './LastAction';
 import FAQ from './FAQ';
+import OrderForm from './OrderForm';
 export default function Home() {
     // const candlesRef = React.useRef();
 
@@ -37,7 +38,8 @@ export default function Home() {
                     <FAQ />
                     {/* <Reviews /> */}
                     <LastAction />
-                    <Footer />
+                    <OrderForm></OrderForm>
+                    {/* <Footer /> */}
                 </Landing>
 
             {/* </main> */}
