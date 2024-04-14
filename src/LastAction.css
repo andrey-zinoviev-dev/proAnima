@@ -22,7 +22,7 @@
   line-height: 1.2;
 }
 
-.lastAction__wrapper button {
+.lastAction__wrapper a {
   background-color: transparent;
   color: #413f3f;
   display: flex;
@@ -36,7 +36,7 @@
   transition: all 0.25s ease-in-out;
 }
 
-.lastAction__wrapper button:hover {
+.lastAction__wrapper a:hover {
   background-color: #895330;
   border: 2px solid #895330;
   color: white;

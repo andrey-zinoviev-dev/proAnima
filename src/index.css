@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,17 +36,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: #213547;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #213547;
 }
 
 h2 {
   font-size: 32px;
   font-weight: 500;
   text-align: center;
+  color: #213547;
 }
 
 p {
@@ -78,6 +81,7 @@ section {
   /* padding: 5% 30%; */
   padding: 5% 0;
   font-family: "Manrope", sans-serif;
+  color: #213547;
 }
 
 .container {
@@ -120,6 +124,12 @@ section {
 @media screen and (max-width: 767px) {
   .container {
     max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .container {
+    max-width: 300px;
   }
 }
 

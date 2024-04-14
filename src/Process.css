@@ -1,3 +1,7 @@
+.process {
+  color: #213547;
+}
+
 .process__wrapper {
   display: flex;
   align-items: flex-start;
@@ -21,6 +25,7 @@
 .process__wrapper-text h2 {
   margin: 0;
   line-height: 1;
+  text-align: left;
 }
 
 .process__p {
@@ -34,4 +39,20 @@
 .process__video {
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 767px) {
+  .process__wrapper {
+    flex-direction: column;
+  }
+  .process__wrapper-text h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+  }
+  .process__wrapper img {
+    order: 2;
+    width: 100%;
+  }
 }

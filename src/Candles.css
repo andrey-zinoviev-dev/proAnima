@@ -14,6 +14,7 @@
 .landing__candles-ul li article {
   background-color: #f0f1f5;
   padding: 0px 30px 30px 30px;
+  color: #213547;
 }
 
 .landing__candles-ul li article h3 {
@@ -22,4 +23,5 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
+  color: #213547;
 }

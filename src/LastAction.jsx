@@ -11,10 +11,10 @@ export default function LastAction() {
             <h2>Не знаете, какой аромат Вам подойдет?</h2>
             <p>Мы сможем подобрать Вам аромат в чате в Телеграм.</p>
           </div>
-          <button>
+          <a href="https://t.me/satibarber">
             <p>Связаться с нами</p>
             <FontAwesomeIcon style={{rotate: "-45deg"}} icon={faArrowRight} />
-          </button>
+          </a>
         </div>
       </div>
     </section>
