@@ -14,6 +14,7 @@
 .faq__wrapper-ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,8 +25,10 @@
 }
 .faq__wrapper-ul-li-button {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
     width: 100%;
     outline: none;
     border: none;
@@ -34,6 +37,8 @@
     border-radius: 0;
     outline: none;
     box-sizing: border-box;
+    padding: 2% 1%;
+    text-align: left;
     /* padding: 0; */
 }
 
@@ -42,6 +47,19 @@
     /* border: 2px solid transparent; */
     border-bottom: 2px solid #895330;
     /* outline: none; */
+}
+
+.faq__wrapper-ul-li-button:active {
+    outline: none;
+}
+
+.faq__wrapper-ul-li-button-div {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .faq__wrapper-ul-li-button h3 {
@@ -53,4 +71,15 @@
     height: 5px;
     background-color: #895330;
     border-radius: 51%;
+}
+
+@media screen and (max-width: 767px) {
+    .faq__wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .faq h2 {
+        max-width: 100%;
+    }
 }

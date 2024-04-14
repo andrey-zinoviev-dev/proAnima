@@ -7,16 +7,15 @@ export default function Qusetion({ question }) {
 
     return (
         <button className="faq__wrapper-ul-li-button ">
-            <h3>{question.q}</h3>
-            {/* <div onClick={() => {
+            <div onClick={() => {
                 setClickedQuestion((prevValue) => {
                     return !prevValue;
                 });
-            }} className="faq__wrapper-ul-li-button">
+            }} className="faq__wrapper-ul-li-button-div">
                 <h3>{question.q}</h3>
                 <FontAwesomeIcon icon={clickedQuestion ? faXmark : faPlus} />
             </div>
-            {clickedQuestion && <p>{question.a}</p>} */}
+            {clickedQuestion && <p>{question.a}</p>}
         </button>
     )
 }

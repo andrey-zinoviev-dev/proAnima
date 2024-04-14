@@ -34,3 +34,12 @@
     padding: 15px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 15px 9%;
+  }
+  .header ul {
+    display: none;
+  }
+}

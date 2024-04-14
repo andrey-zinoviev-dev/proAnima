@@ -35,7 +35,7 @@ export default function Home() {
                     <Candles />
                     <Process />
                     <FAQ />
-                    <Reviews />
+                    {/* <Reviews /> */}
                     <LastAction />
                     <Footer />
                 </Landing>
