@@ -31,14 +31,14 @@ export const candles = [
         type: "container candle"
     },
     {
-        name: "Свеча Жасмин",
+        name: "Саше Жасмин",
         cover: good3,
-        type: "container candle"
+        type: "sache"
     },
     {
         name: "Свеча Жасмин",
         cover: good3,
-        type: "container candle"
+        type: "sache"
     },
     {
         name: "Свеча формовая 1",

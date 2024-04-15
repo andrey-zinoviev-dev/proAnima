@@ -2,7 +2,7 @@ import { candles } from "./utils";
 import Candle from "./Candle";
 import "./Candles.css";
 
-export default function Candles() {
+export default function Candles({setOrder}) {
     return (
         <section className="landing__candles">
             <div className="container">
@@ -10,7 +10,7 @@ export default function Candles() {
                 <ul className="landing__candles-ul">
                     {candles.map((candle) => {
                         return <li className="landing__goods-ul-li" key={candle.name}>
-                            <Candle candle={candle} />
+                            <Candle setOrder={setOrder} candle={candle} />
 
                         </li>
                     })}
