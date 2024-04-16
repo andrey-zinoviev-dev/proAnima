@@ -23,13 +23,13 @@ export default function Home() {
     const [orderClicked, setOrderClicked] = React.useState(false);
     const [order, setOrder] = React.useState([]);
 
-    React.useEffect(() => {
-        console.log(order);
-    }, [order]);
+    // React.useEffect(() => {
+    //     console.log(order);
+    // }, [order]);
 
     return (
         <>
-            <Header></Header>
+            <Header order={order} setOrderClicked={setOrderClicked}></Header>
             {/* <main className="main"> */}
                 <Landing>
                     <Starter setOrderClicked={() => {

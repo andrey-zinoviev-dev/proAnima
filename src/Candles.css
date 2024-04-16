@@ -12,16 +12,19 @@
 }
 
 .landing__candles-ul li article {
-  background-color: #f0f1f5;
-  padding: 0px 30px 30px 30px;
+  /* background-color: #f0f1f5;
+  padding: 0px 30px 30px 30px; */
   color: #213547;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .landing__candles-ul li article h3 {
   margin: 0;
   line-height: 1;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
   color: #213547;
 }

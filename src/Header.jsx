@@ -1,6 +1,7 @@
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
-
-export default function Header() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+export default function Header({order, setOrderClicked}) {
   return (
     <header className="header">
       <div className="container">
@@ -13,6 +14,12 @@ export default function Header() {
                   <li>Задать вопрос</li>
               </ul>
           </nav>
+          <button className="header__cart-btn" onClick={() => {
+            setOrderClicked(true);
+          }}>
+            <FontAwesomeIcon icon={faBagShopping} />
+            <p>{order.length}</p>
+          </button>
         </div>
       </div>
     </header>

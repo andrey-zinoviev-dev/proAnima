@@ -1,9 +1,10 @@
 import good1 from "./assets/8.png";
-import good2 from "./assets/14.png";
-import good3 from "./assets/20.png";
-import good4 from "./assets/13.png";
-import good5 from "./assets/14.png";
-import good6 from "./assets/15.png";
+import good3 from "./assets/2.png";
+import good2 from "./assets/6.png";
+import good14 from "./assets/14.png";
+// import good4 from "./assets/13.png";
+// import good5 from "./assets/14.png";
+// import good6 from "./assets/15.png";
 // import good4 from "./assets/_DSC3843.JPG";
 // import good5 from "./assets/_DSC3844.JPG";
 // import good6 from './assets/_DSC3853.JPG';
@@ -19,42 +20,75 @@ import good6 from "./assets/15.png";
 //     }
 // ]
 
+
+
 export const candles = [
     {
         name: "Свеча Манго-базилик",
         cover: good1,
-        type: "container candle"
+        type: "container candle",
+        // size: [250, 190]
     },
     {
         name: "Свеча Ваниль-пачули",
         cover: good2,
-        type: "container candle"
-    },
-    {
-        name: "Саше Жасмин",
-        cover: good3,
-        type: "sache"
+        type: "container candle",
+        // size: [250, 190],
     },
     {
         name: "Свеча Жасмин",
         cover: good3,
-        type: "sache"
+        type: "container",
+        // size: [250, 190]
     },
     {
-        name: "Свеча формовая 1",
-        cover: good4,
-        type: "form candle"
+        name: "Кожа-гранат",
+        cover: good3,
+        type: "container",
+        // size: [250, 190]
     },
     {
-        name: "Свеча формовая 2",
-        cover: good5,
-        type: "form candle"
+        name: "Русская баня",
+        cover: good3,
+        type: "container",
+        // size: [250, 190],
     },
     {
-        name: "Свеча формовая 3",
-        cover: good5,
-        type: "form candle"
-    }
+        name: "Лакричный абсент",
+        cover: good3,
+        type: "container",
+        // size: [250, 190]
+    },
+    {
+        name: "Свеча Манго-базилик",
+        cover: good14,
+        type: "form"
+    },
+    // {
+    //     name: "Саше Жасмин",
+    //     cover: good3,
+    //     type: "sache"
+    // },
+    // {
+    //     name: "Свеча Жасмин",
+    //     cover: good3,
+    //     type: "sache"
+    // },
+    // {
+    //     name: "Свеча формовая 1",
+    //     cover: good4,
+    //     type: "form candle"
+    // },
+    // {
+    //     name: "Свеча формовая 2",
+    //     cover: good5,
+    //     type: "form candle"
+    // },
+    // {
+    //     name: "Свеча формовая 3",
+    //     cover: good5,
+    //     type: "form candle"
+    // }
     // {
     //     name: "Саше 1",
     //     cover: good4

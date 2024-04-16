@@ -10,6 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+    z-index: 20;
 }
 
 .header__wrapper {
@@ -34,6 +36,29 @@
   box-sizing: border-box;
   gap: 25px;
   padding: 0;
+}
+
+.header__cart-btn {
+  position: relative;
+  aspect-ratio: 1/1;
+  background-color: #f0f1f5;
+}
+
+.header__cart-btn p {
+  position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #895330;
+    color: white;
+    /* aspect-ratio: 1 / 1; */
+    display: flex;
+    /* aspect-ratio: 1 / 1; */
+    width: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    aspect-ratio: 1 / 1;
 }
 
 @media screen and (max-width: 1023px) {
