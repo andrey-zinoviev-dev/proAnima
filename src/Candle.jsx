@@ -1,11 +1,9 @@
 // import React from "react";
 import "./Good.css";
 
-export default function Candle({ candle, setOrder }) {
+export default function Candle({ candle, setSelectedOrder }) {
     return (
-        <article onClick={() => {
-            // setOrder({...candle, quantity: 1})
-        }} className="landing__goods-ul-li-article">
+        <article className="landing__goods-ul-li-article">
             <img className="landing__goods-ul-li-article-img" src={candle.cover}></img>
 
             <div className="landing__goods-ul-li-article-wrapper">
@@ -19,7 +17,8 @@ export default function Candle({ candle, setOrder }) {
                     </li>
                 </ul>}
                 <button onClick={() => {
-                    setOrder({...candle, quantity: 1});
+                    // setSelectedOrder(candle);
+                    // setOrder({...candle, quantity: 1});
                 }}>Заказать</button>
             </div>
         </article>

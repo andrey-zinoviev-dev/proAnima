@@ -22,38 +22,28 @@ export default function Home() {
     //states
     const [orderClicked, setOrderClicked] = React.useState(false);
     const [order, setOrder] = React.useState([]);
-
-    // React.useEffect(() => {
-    //     console.log(order);
-    // }, [order]);
+    const [selectedOrder, setSelectedOrder] = React.useState(null);
+    
+    React.useEffect(() => {
+        console.log(selectedOrder);
+    }, [selectedOrder]);
 
     return (
         <>
-            <Header order={order} setOrderClicked={setOrderClicked}></Header>
+            <Header order={order}></Header>
             {/* <main className="main"> */}
                 <Landing>
                     <Starter setOrderClicked={() => {
                         setOrderClicked(true);
                     }} />
                     <Categories />
-                    <Candles setOrder={(data) => {
-                        setOrder((prevValue) => {
-                            return [...prevValue, data];
-                        })
-                    }}/>
+                    <Candles setSelectedOrder={setSelectedOrder}/>
                     <Process />
                     <FAQ />
                     {/* <Reviews /> */}
                     <LastAction />
-                    {orderClicked && <OrderForm order={order} setOrder={(element) => {
-                        setOrder((prevValue) => {
-                            return prevValue.filter((candle) => {
-                                return candle.name !== element.name;
-                            })
-                        })
-                    }} setOrderClicked={() => {
-                        setOrderClicked(false);
-                    }}></OrderForm>}
+                    {orderClicked && <OrderForm></OrderForm>}
+                    {/* {selectedOrder && <Cart selectedOrder={selectedOrder}></Cart>} */}
                     {/* <Footer /> */}
                 </Landing>
                 {/* {orderClicked && } */}

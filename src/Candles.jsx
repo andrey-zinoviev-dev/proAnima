@@ -2,7 +2,7 @@ import { candles } from "./utils";
 import Candle from "./Candle";
 import "./Candles.css";
 
-export default function Candles({setOrder}) {
+export default function Candles({ setSelectedOrder }) {
     return (
         <section className="landing__candles">
             <div className="container">
@@ -10,28 +10,40 @@ export default function Candles({setOrder}) {
                 <div>
                     <h3>Контейнерные свечи</h3>
                     <ul className="landing__candles-ul">
-                    {candles.filter((candle) => {
-                        return candle.type.includes("container");
-                    }).map((candle) => {
-                        return <li className="landing__goods-ul-li" key={candle.name}>
-                            <Candle setOrder={setOrder} candle={candle} />
+                        {candles.filter((candle) => {
+                            return candle.type.includes("container");
+                        }).map((candle) => {
+                            return <li className="landing__goods-ul-li" key={candle.name}>
+                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
 
-                        </li>
-                    })}
-                </ul>
+                            </li>
+                        })}
+                    </ul>
                 </div>
                 <div>
                     <h3>Формовые свечи</h3>
                     <ul className="landing__candles-ul">
-                    {candles.filter((candle) => {
-                        return candle.type.includes("form");
-                    }).map((candle) => {
-                        return <li className="landing__goods-ul-li" key={candle.name}>
-                            <Candle setOrder={setOrder} candle={candle} />
+                        {candles.filter((candle) => {
+                            return candle.type.includes("form");
+                        }).map((candle) => {
+                            return <li className="landing__goods-ul-li" key={candle.name}>
+                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
 
-                        </li>
-                    })}
-                </ul>
+                            </li>
+                        })}
+                    </ul>
+                </div>
+                <div>
+                    <h3>Саше</h3>
+                    <ul className="landing__candles-ul">
+                        {candles.filter((candle) => {
+                            return candle.type.includes("sasche");
+                        }).map((candle) => {
+                            return <li className="landing__goods-ul-li" key={candle.name}>
+                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
+                            </li>
+                        })}
+                    </ul>
                 </div>
             </div>
         </section>

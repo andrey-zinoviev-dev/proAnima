@@ -4,13 +4,13 @@ import "./OrderForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-export default function OrderForm({order, setOrder, setOrderClicked}) {
+export default function OrderForm() {
     return (
         <section className="order">
             <div className="container">
 
                 <div className="order__wrapper">
-                    <button className="order__close" onClick={setOrderClicked}>
+                    <button className="order__close">
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
                     <img src={formPic} />
@@ -19,7 +19,7 @@ export default function OrderForm({order, setOrder, setOrderClicked}) {
                             Заказать свечи
                         </h2>
                         <ul className="order__wrapper-ul">
-                            {order.map((orderEl) => {
+                            {/* {order.map((orderEl) => {
                                 return <li key={orderEl.name}>
                                     <img src={orderEl.cover}></img>
                                     <p>Свеча Манго-базилик</p>
@@ -30,7 +30,7 @@ export default function OrderForm({order, setOrder, setOrderClicked}) {
                                         <FontAwesomeIcon icon={faXmark} />
                                     </button>
                                 </li>
-                            })}
+                            })} */}
                             {/* <li>
                                 <img src={good1}></img>
                                 <p>Свеча Манго-базилик</p>

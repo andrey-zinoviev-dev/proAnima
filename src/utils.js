@@ -2,7 +2,8 @@ import good1 from "./assets/8.png";
 import good3 from "./assets/2.png";
 import good2 from "./assets/6.png";
 import good14 from "./assets/14.png";
-// import good4 from "./assets/13.png";
+import good4 from "./assets/13.png";
+import good5 from "./assets/19.png";
 // import good5 from "./assets/14.png";
 // import good6 from "./assets/15.png";
 // import good4 from "./assets/_DSC3843.JPG";
@@ -41,12 +42,12 @@ export const candles = [
         type: "container",
         // size: [250, 190]
     },
-    {
-        name: "Кожа-гранат",
-        cover: good3,
-        type: "container",
-        // size: [250, 190]
-    },
+    // {
+    //     name: "Кожа-гранат",
+    //     cover: good3,
+    //     type: "container",
+    //     // size: [250, 190]
+    // },
     {
         name: "Русская баня",
         cover: good3,
@@ -60,10 +61,40 @@ export const candles = [
         // size: [250, 190]
     },
     {
-        name: "Свеча Манго-базилик",
+        name: "Ягодный пунш",
+        cover: good3,
+        type: "form"
+    },
+    {
+        name: "Жасмин",
         cover: good14,
         type: "form"
     },
+    {
+        name: "Ваниль-пачули",
+        cover: good14,
+        type: "form"
+    },
+    {
+        name: "Жасмин",
+        cover: good5,
+        type: "sasche"
+    },
+    {
+        name: "Ягодный пунш",
+        cover: good5,
+        type: "sasche"
+    },
+    {
+        name: "Ваниль-пачули",
+        cover: good5,
+        type: "sasche"
+    },
+    {
+        name: "Лаванда",
+        cover: good5,
+        type: "sasche",
+    }
     // {
     //     name: "Саше Жасмин",
     //     cover: good3,
