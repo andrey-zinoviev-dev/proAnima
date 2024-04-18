@@ -2,7 +2,7 @@ import { candles } from "./utils";
 import Candle from "./Candle";
 import "./Candles.css";
 
-export default function Candles({ setSelectedOrder }) {
+export default function Candles({ setOrder }) {
     return (
         <section className="landing__candles">
             <div className="container">
@@ -14,7 +14,7 @@ export default function Candles({ setSelectedOrder }) {
                             return candle.type.includes("container");
                         }).map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
-                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
+                                <Candle setOrder={setOrder} candle={candle} />
 
                             </li>
                         })}
@@ -27,7 +27,7 @@ export default function Candles({ setSelectedOrder }) {
                             return candle.type.includes("form");
                         }).map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
-                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
+                                <Candle setOrder={setOrder}  candle={candle} />
 
                             </li>
                         })}
@@ -40,7 +40,7 @@ export default function Candles({ setSelectedOrder }) {
                             return candle.type.includes("sasche");
                         }).map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
-                                <Candle setSelectedOrder={setSelectedOrder} candle={candle} />
+                                <Candle setOrder={setOrder} candle={candle} />
                             </li>
                         })}
                     </ul>

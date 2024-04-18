@@ -4,38 +4,35 @@ import "./OrderForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-export default function OrderForm() {
+export default function OrderForm({ order, setOrderClicked }) {
     return (
         <section className="order">
             <div className="container">
 
                 <div className="order__wrapper">
-                    <button className="order__close">
+                    <button className="order__close" onClick={() => {
+                        setOrderClicked(false);
+                    }}>
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
-                    <img src={formPic} />
+                    <img className="order__wrapper-cover" src={formPic} />
                     <div className="order__wrapper-content">
                         <h2>
                             Заказать свечи
                         </h2>
                         <ul className="order__wrapper-ul">
-                            {/* {order.map((orderEl) => {
+                            {order.map((orderEl) => {
                                 return <li key={orderEl.name}>
                                     <img src={orderEl.cover}></img>
-                                    <p>Свеча Манго-базилик</p>
-                                    <span>1</span>
-                                    <button onClick={() => {
+                                    <p>{orderEl.name}</p>
+                                    <span>{order.quantity}</span>
+                                    {/* <button onClick={() => {
                                         setOrder(orderEl)
                                     }}>
                                         <FontAwesomeIcon icon={faXmark} />
-                                    </button>
+                                    </button> */}
                                 </li>
-                            })} */}
-                            {/* <li>
-                                <img src={good1}></img>
-                                <p>Свеча Манго-базилик</p>
-                                <span>1</span>
-                            </li> */}
+                            })}
                         </ul>
                         <form>
                             <input name="name" placeholder="Имя"></input>

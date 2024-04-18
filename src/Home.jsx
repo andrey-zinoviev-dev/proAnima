@@ -16,6 +16,10 @@ import Reviews from './Reviews';
 import LastAction from './LastAction';
 import FAQ from './FAQ';
 import OrderForm from './OrderForm';
+import Notification from "./Nofitifaction";
+
+
+
 export default function Home() {
     // const candlesRef = React.useRef();
 
@@ -25,24 +29,33 @@ export default function Home() {
     const [selectedOrder, setSelectedOrder] = React.useState(null);
     
     React.useEffect(() => {
-        console.log(selectedOrder);
-    }, [selectedOrder]);
+        // console.log(order);
+        setSelectedOrder(order[order.length - 1]);
+        const timeout = setTimeout(() => {
+            setSelectedOrder(null);
+        }, 3000);
+
+        return () => {
+            clearTimeout(timeout);
+        }
+    }, [order.length]);
 
     return (
         <>
-            <Header order={order}></Header>
+            <Header order={order} setOrderClicked={setOrderClicked}></Header>
             {/* <main className="main"> */}
                 <Landing>
                     <Starter setOrderClicked={() => {
                         setOrderClicked(true);
                     }} />
-                    <Categories />
-                    <Candles setSelectedOrder={setSelectedOrder}/>
+                    {/* <Categories /> */}
+                    <Candles setOrder={setOrder}/>
                     <Process />
                     <FAQ />
                     {/* <Reviews /> */}
                     <LastAction />
-                    {orderClicked && <OrderForm></OrderForm>}
+                    {orderClicked && <OrderForm order={order} setOrderClicked={setOrderClicked}></OrderForm>}
+                    {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
                     {/* {selectedOrder && <Cart selectedOrder={selectedOrder}></Cart>} */}
                     {/* <Footer /> */}
                 </Landing>
