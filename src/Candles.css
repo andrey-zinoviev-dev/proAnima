@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
 }
 
 .landing__candles-ul li article h3 {
@@ -27,4 +28,25 @@
   font-size: 18px;
   letter-spacing: 1px;
   color: #213547;
+}
+
+.landing__goods-ul-li-article-wrapper-info {
+  aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 51%;
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 0;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.landing__goods-ul-li-article-wrapper-info:hover {
+  border: 2px solid #646cff;
+  color: #646cff;
 }

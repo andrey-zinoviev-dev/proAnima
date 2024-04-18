@@ -38,3 +38,17 @@
     font-size: 12px;
     font-weight: 700;
 }
+
+.landing__goods-ul-li-article-wrapper-warning {
+    background: black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    display: flex;
+    gap: 15px;
+}
+
+.landing__goods-ul-li-article-wrapper-warning p {
+    line-height: 1;
+}
