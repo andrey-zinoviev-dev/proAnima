@@ -3,10 +3,11 @@ import formPic from "./assets/IMG_3760.jpg";
 import "./OrderForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function OrderForm({ order, setOrderClicked }) {
     return (
-        <section className="order">
+        <motion.section animate={{opacity: 1, visibility: "visible"}} exit={{opacity: 0, visibility: "hidden"}} className="order">
             <div className="container">
 
                 <div className="order__wrapper">
@@ -42,6 +43,6 @@ export default function OrderForm({ order, setOrderClicked }) {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

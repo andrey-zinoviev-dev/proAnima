@@ -1,9 +1,17 @@
 import good1 from "./assets/8.png";
 import good3 from "./assets/2.png";
 import good2 from "./assets/6.png";
-import good14 from "./assets/14.png";
-import good4 from "./assets/13.png";
+
 import good5 from "./assets/19.png";
+import smallMango from "./assets/16.png";
+import smallJasmin from "./assets/3.png";
+import smallVanilla from "./assets/9.png";
+import smallPaloSanto from "./assets/11.png";
+
+import form1 from "./assets/13.png";
+import form2 from "./assets/14.png";
+import form3 from "./assets/15.png";
+
 // import good5 from "./assets/14.png";
 // import good6 from "./assets/15.png";
 // import good4 from "./assets/_DSC3843.JPG";
@@ -28,51 +36,57 @@ export const candles = [
         name: "Свеча Манго-базилик",
         cover: good1,
         type: "container candle",
-        // size: [250, 190]
+        size: 250
     },
     {
         name: "Свеча Ваниль-пачули",
         cover: good2,
         type: "container candle",
-        // size: [250, 190],
+        size: 250,
     },
     {
         name: "Свеча Жасмин",
         cover: good3,
         type: "container",
-        // size: [250, 190]
-    },
-    // {
-    //     name: "Кожа-гранат",
-    //     cover: good3,
-    //     type: "container",
-    //     // size: [250, 190]
-    // },
-    {
-        name: "Русская баня",
-        cover: good3,
-        type: "container",
-        // size: [250, 190],
+        size: 250
     },
     {
-        name: "Лакричный абсент",
-        cover: good3,
+        name: "Свеча Манго-базилик",
+        cover: smallMango,
+        type: "container candle",
+        size: 190
+    },
+    {
+        name: "Свеча Ваниль-пачули",
+        cover: smallVanilla,
+        type: "container candle",
+        size: 190,
+    },
+    {
+        name: "Свеча Жасмин",
+        cover: smallJasmin,
         type: "container",
-        // size: [250, 190]
+        size: 190
+    },
+    {
+        name: "Пало-Санто",
+        cover: smallPaloSanto,
+        type: "container",
+        size: 190
     },
     {
         name: "Ягодный пунш",
-        cover: good3,
+        cover: form1,
         type: "form"
     },
     {
         name: "Жасмин",
-        cover: good14,
+        cover: form2,
         type: "form"
     },
     {
         name: "Ваниль-пачули",
-        cover: good14,
+        cover: form3,
         type: "form"
     },
     {

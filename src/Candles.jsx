@@ -11,7 +11,19 @@ export default function Candles({ setOrder }) {
                     <h3>Контейнерные свечи</h3>
                     <ul className="landing__candles-ul">
                         {candles.filter((candle) => {
-                            return candle.type.includes("container");
+                            return candle.type.includes("container") && candle.size === 250;
+                        }).map((candle) => {
+                            return <li className="landing__goods-ul-li" key={candle.name}>
+                                <Candle setOrder={setOrder} candle={candle} />
+
+                            </li>
+                        })}
+                    </ul>
+                </div>
+                <div>
+                    <ul className="landing__candles-ul">
+                        {candles.filter((candle) => {
+                            return candle.type.includes("container") && candle.size === 190;
                         }).map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
                                 <Candle setOrder={setOrder} candle={candle} />
@@ -28,7 +40,6 @@ export default function Candles({ setOrder }) {
                         }).map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
                                 <Candle setOrder={setOrder}  candle={candle} />
-
                             </li>
                         })}
                     </ul>

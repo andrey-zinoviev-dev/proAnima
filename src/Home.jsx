@@ -18,7 +18,7 @@ import FAQ from './FAQ';
 import OrderForm from './OrderForm';
 import Notification from "./Nofitifaction";
 
-
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
     // const candlesRef = React.useRef();
@@ -43,24 +43,21 @@ export default function Home() {
     return (
         <>
             <Header order={order} setOrderClicked={setOrderClicked}></Header>
-            {/* <main className="main"> */}
                 <Landing>
                     <Starter setOrderClicked={() => {
                         setOrderClicked(true);
                     }} />
-                    {/* <Categories /> */}
                     <Candles setOrder={setOrder}/>
                     <Process />
                     <FAQ />
                     {/* <Reviews /> */}
                     <LastAction />
-                    {orderClicked && <OrderForm order={order} setOrderClicked={setOrderClicked}></OrderForm>}
-                    {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
-                    {/* {selectedOrder && <Cart selectedOrder={selectedOrder}></Cart>} */}
-                    {/* <Footer /> */}
+                    <AnimatePresence>
+                        {orderClicked && <OrderForm order={order} setOrderClicked={setOrderClicked}></OrderForm>}
+                        {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
+                    </AnimatePresence>
                 </Landing>
-                {/* {orderClicked && } */}
-            {/* </main> */}
+
         </>
         
     )

@@ -15,9 +15,7 @@ export default function Header({ order, setOrderClicked }) {
               </ul>
           </nav>
           <button className="header__cart-btn" onClick={() => {
-              setOrderClicked((prevValue) => {
-                return !prevValue;
-              })
+              setOrderClicked(true);
           }}>
             <FontAwesomeIcon icon={faBagShopping} />
             <p>{order.length}</p>

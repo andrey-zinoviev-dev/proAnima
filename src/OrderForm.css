@@ -9,6 +9,8 @@
     background-color: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(3px);
     z-index: 50;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .order__close {
