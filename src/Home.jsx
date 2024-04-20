@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Header from './Header'
 // import arrowPng from "./assets/arrowWhite.png";
 // import Spline from '@splinetool/react-spline';
@@ -6,57 +6,44 @@ import "./Home.css";
 
 // import { candles, goods } from "./utils";
 // import Good from "./Good";
-import Categories from "./Categories";
-import Landing from "./landing";
-import Starter from './Starter';
-import Candles from './Candles';
-import Process from './Process';
-import Footer from './Footer';
-import Reviews from './Reviews';
-import LastAction from './LastAction';
-import FAQ from './FAQ';
-import OrderForm from './OrderForm';
-import Notification from "./Nofitifaction";
+// import Categories from "./Categories";
+// import Landing from "./landing";
+// import Starter from './Starter';
+// import Candles from './Candles';
+// import Process from './Process';
+// import Footer from './Footer';
+// import Reviews from './Reviews';
+// import LastAction from './LastAction';
+// import FAQ from './FAQ';
+// import OrderForm from './OrderForm';
+// import Notification from "./Nofitifaction";
 
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
+import { Outlet } from "react-router-dom";
 
-export default function Home() {
+export default function Home({ order, setOrderClicked}) {
     // const candlesRef = React.useRef();
-
-    //states
-    const [orderClicked, setOrderClicked] = React.useState(false);
-    const [order, setOrder] = React.useState([]);
-    const [selectedOrder, setSelectedOrder] = React.useState(null);
-    
-    React.useEffect(() => {
-        // console.log(order);
-        setSelectedOrder(order[order.length - 1]);
-        const timeout = setTimeout(() => {
-            setSelectedOrder(null);
-        }, 3000);
-
-        return () => {
-            clearTimeout(timeout);
-        }
-    }, [order.length]);
 
     return (
         <>
             <Header order={order} setOrderClicked={setOrderClicked}></Header>
-                <Landing>
+                <main className="main">
+                    <Outlet></Outlet>
+                </main>
+                {/* <Landing>
+                    
                     <Starter setOrderClicked={() => {
                         setOrderClicked(true);
                     }} />
                     <Candles setOrder={setOrder}/>
                     <Process />
                     <FAQ />
-                    {/* <Reviews /> */}
                     <LastAction />
                     <AnimatePresence>
-                        {orderClicked && <OrderForm order={order} setOrderClicked={setOrderClicked}></OrderForm>}
+                        {orderClicked && <OrderForm order={order} setOrder={setOrder} setOrderClicked={setOrderClicked}></OrderForm>}
                         {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
                     </AnimatePresence>
-                </Landing>
+                </Landing> */}
 
         </>
         

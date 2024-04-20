@@ -23,8 +23,8 @@ export default function Process () {
 
                 </div>
 
-                <h3>Процесс создания свечей</h3>
-                <video className="process__video" src={video} controls muted></video>
+                {/* <h3>Процесс создания свечей</h3>
+                <video className="process__video" src={video} controls muted></video> */}
             </div>
         </section>
     )

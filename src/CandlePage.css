@@ -1,0 +1,33 @@
+.candle__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.candle__wrapper img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background-color: #f0f1f5;
+  border-radius: 3px;
+}
+
+.candle__wrapper-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 0% 10%;
+}
+
+.candle__wrapper-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  /* max-width: 360px; */
+}
+
+.candle__wrapper-content-h3 {
+  margin: 0;
+  line-height: 1;
+}

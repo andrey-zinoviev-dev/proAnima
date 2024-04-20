@@ -7,13 +7,13 @@ export default function Header({ order, setOrderClicked }) {
       <div className="container">
         <div className="header__wrapper">
           <p className="header__logo">PROanima</p>
-          <nav>
+          {/* {<nav>
               <ul>
                   <li>Свечи</li>
                   <li>Процесс производства</li>
                   <li>Задать вопрос</li>
               </ul>
-          </nav>
+          </nav>} */}
           <button className="header__cart-btn" onClick={() => {
               setOrderClicked(true);
           }}>

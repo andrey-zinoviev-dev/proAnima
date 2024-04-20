@@ -1,13 +1,37 @@
-// import React from 'react'
+import React from 'react'
 import './App.css'
 import Home from './Home'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Landing from './landing'
+import CandlePage from './CandlePage'
 // const Landing = 
 function App() {
+  //states
+  const [order, setOrder] = React.useState([]);
+  const [orderClicked, setOrderClicked] = React.useState(false);
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home order={order} setOrderClicked={setOrderClicked}></Home>,
+      children: [
+        {
+          path: "/",
+          element: <Landing order={order} setOrder={setOrder} orderClicked={orderClicked} setOrderClicked={setOrderClicked}></Landing>
+        },
+        {
+          path: "/candles/:name",
+          element: <CandlePage></CandlePage>
+        }
+      ]
+    }
+  ])
   return (
-    <>
-      {/* <Header /> */}
-      <Home />
-    </>
+    <RouterProvider router={router}></RouterProvider>
+    // <>
+    //   <Header />
+    //   <Home />
+    // </>
   )
 }
 

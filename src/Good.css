@@ -1,3 +1,29 @@
+.landing__goods-ul-warning {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.landing__goods-ul-warning-wrapper {
+
+}
+
+.landing__goods-ul-warning-wrapper p {
+    line-height: 1.1;
+    max-width: 360px;
+}
+
+.landing__goods-ul-warning-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
 .landing__goods-ul-li-article-img {
     width: 100%;
     /* aspect-ratio: 1/1;
