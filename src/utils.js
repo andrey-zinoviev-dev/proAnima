@@ -1,3 +1,4 @@
+import santoBig from "./assets/1.png";
 import good1 from "./assets/8.png";
 import good3 from "./assets/2.png";
 import good2 from "./assets/6.png";
@@ -33,23 +34,29 @@ import form3 from "./assets/15.png";
 
 export const containerCandles = [
     {
-        name: "Свеча Манго-базилик",
+        name: "Манго-базилик",
         cover: good1,
         type: "container candle",
         size: 250
     },
     {
-        name: "Свеча Ваниль-пачули",
+        name: "Ваниль-пачули",
         cover: good2,
         type: "container candle",
         size: 250,
     },
     {
-        name: "Свеча Жасмин",
+        name: "Жасмин",
         cover: good3,
         type: "container",
-        size: 250
+        size: 250,
     },
+    {
+        name: "Пало-Санто",
+        cover: santoBig,
+        type: "container",
+        size: 250,
+    }
 ]
 
 export const smallContainerCandles = [

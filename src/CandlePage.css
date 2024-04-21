@@ -1,3 +1,21 @@
+.candle {
+  min-height: 100vh;
+}
+
+.candle__back {
+  display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 25px 0;
+    color: #213547;
+}
+
+.candle__back div {
+  background-color: #f0f1f5;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
 .candle__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -15,8 +33,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   box-sizing: border-box;
   padding: 0% 10%;
+  gap: 25px;
 }
 
 .candle__wrapper-content-text {
@@ -30,4 +50,30 @@
 .candle__wrapper-content-h3 {
   margin: 0;
   line-height: 1;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.candle__wrapper-content-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+  /* width: 100%; */
+  font-size: 14px;
+}
+
+.candle__wrapper-content-text ul li {
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+@media screen and (max-width: 1279px) {
+  .candle__wrapper-content {
+    padding: 0 5%;
+  }
 }

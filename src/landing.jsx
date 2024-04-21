@@ -38,7 +38,7 @@ export default function Landing({ order, setOrder, orderClicked, setOrderClicked
             <FAQ />
             <LastAction />
             <AnimatePresence>
-                {orderClicked && <OrderForm order={order} setOrder={setOrder} setOrderClicked={setOrderClicked}></OrderForm>}
+                {/* {orderClicked && <OrderForm order={order} setOrder={setOrder} setOrderClicked={setOrderClicked}></OrderForm>} */}
                 {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
             </AnimatePresence>
         </>

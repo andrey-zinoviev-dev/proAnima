@@ -13,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home order={order} setOrderClicked={setOrderClicked}></Home>,
+      element: <Home order={order} setOrder={setOrder} orderClicked={orderClicked} setOrderClicked={setOrderClicked}></Home>,
       children: [
         {
           path: "/",
@@ -21,7 +21,7 @@ function App() {
         },
         {
           path: "/candles/:name",
-          element: <CandlePage></CandlePage>
+          element: <CandlePage setOrder={setOrder}></CandlePage>
         }
       ]
     }
