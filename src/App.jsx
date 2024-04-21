@@ -28,10 +28,6 @@ function App() {
   ])
   return (
     <RouterProvider router={router}></RouterProvider>
-    // <>
-    //   <Header />
-    //   <Home />
-    // </>
   )
 }
 
