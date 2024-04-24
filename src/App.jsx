@@ -10,6 +10,8 @@ function App() {
   const [order, setOrder] = React.useState([]);
   const [orderClicked, setOrderClicked] = React.useState(false);
 
+
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -25,7 +27,12 @@ function App() {
         }
       ]
     }
-  ])
+  ]);
+
+  React.useEffect(() => {
+    console.log(order);
+  }, [order]);
+
   return (
     <RouterProvider router={router}></RouterProvider>
   )

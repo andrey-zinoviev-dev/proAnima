@@ -6,7 +6,15 @@ import { faXmark, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export default function OrderForm({ order, setOrder, setOrderClicked }) {
-    // console.log(order);
+    //functions
+    function minusCandle(candle) {
+        setOrder((prevValue) => {
+            return prevValue.map((prevCandle) => {
+                return prevCandle.name === candle.name ? {...prevCandle, quantity: prevCandle.quantity - 1} : prevCandle;
+            })
+        })
+    }
+
     return (
         <motion.section animate={{opacity: 1, visibility: "visible"}} exit={{opacity: 0, visibility: "hidden"}} className="order">
             <div className="container">
@@ -23,11 +31,11 @@ export default function OrderForm({ order, setOrder, setOrderClicked }) {
                             Заказать свечи
                         </h2>
                         <ul className="order__wrapper-ul">
-                            {order.map((orderEl) => {
+                            {order.length > 0 ? order.map((orderEl) => {
                                 return <li key={orderEl.name}>
                                     <img src={orderEl.cover}></img>
                                     <div className="order__wrapper-ul-qunatity-div">
-                                        <button onClick={() => {
+                                        <button  onClick={() => {
                                             setOrder((prevValue) => {
                                                 return prevValue.map((prevCandle) => {
                                                     return prevCandle.name === orderEl.name ? {...prevCandle, quantity: prevCandle.quantity + 1} : prevCandle;
@@ -37,12 +45,8 @@ export default function OrderForm({ order, setOrder, setOrderClicked }) {
                                             <FontAwesomeIcon icon={faPlus} />
                                         </button>
                                         <span>{orderEl.quantity}</span>
-                                        <button onClick={() => {
-                                            setOrder((prevValue) => {
-                                                return prevValue.map((prevCandle) => {
-                                                    return prevCandle.name === orderEl.name ? {...prevCandle, quantity: prevCandle.quantity - 1} : prevCandle;
-                                                })
-                                            })
+                                        <button disabled={orderEl.quantity < 2 ? true : false} className={orderEl.quantity < 2 && "disabled-btn" } onClick={() => {
+                                            minusCandle(orderEl);
                                         }}>
                                             <FontAwesomeIcon icon={faMinus} />
                                         </button>
@@ -61,9 +65,15 @@ export default function OrderForm({ order, setOrder, setOrderClicked }) {
                                     </button>
                                     {/* <span><FontAwesomeIcon icon={faXmark} /></span> */}
                                 </li>
-                            })}
+                            })
+                            :
+                            <li  id="empty-cart" key="no_candles-in-order">
+                                <h3>Ваша корзина пуста...</h3>
+                                <p>Но Вы можете выбрать себе что-то</p>
+                            </li>
+                        }
                         </ul>
-                        <form>
+                        <form className="order__form">
                             <input name="name" placeholder="Имя"></input>
                             <input name="phone" placeholder="Телефон"></input>
                             <button>Отправить заказ</button>

@@ -6,7 +6,7 @@ import "./Home.css";
 import OrderForm from './OrderForm';
 import Notification from "./Nofitifaction";
 import { AnimatePresence } from "framer-motion";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 export default function Home({ order, orderClicked, setOrder, setOrderClicked}) {
     const [selectedOrder, setSelectedOrder] = React.useState(null);
@@ -32,6 +32,7 @@ export default function Home({ order, orderClicked, setOrder, setOrderClicked}) 
                         {selectedOrder && <Notification selectedOrder={selectedOrder}></Notification>}
                         {orderClicked && <OrderForm order={order} setOrder={setOrder} setOrderClicked={setOrderClicked}></OrderForm>}
                     </AnimatePresence>
+                    <ScrollRestoration></ScrollRestoration>
                 </main>
         </>
         

@@ -47,6 +47,10 @@
     gap: 15px;
 }
 
+.landing__goods-ul-li-article-wrapper p {
+    line-height: 1;
+}
+
 .landing__goods-ul-li-article-ul {
     display: flex;
     padding: 0;
@@ -77,4 +81,16 @@
 
 .landing__goods-ul-li-article-wrapper-warning p {
     line-height: 1;
+}
+
+.landing__goods-ul-li-article-wrapper button {
+    background-color: #895330;
+    border: 2px solid #895330;
+    color: white;
+}
+
+.landing__goods-ul-li-article-wrapper button:hover {
+    background-color: transparent;
+    /* border: 2px solid #895330; */
+    color: #895330;
 }

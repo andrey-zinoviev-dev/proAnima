@@ -3,7 +3,8 @@ import Candle from "./Candle";
 import "./Candles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-export default function Candles({ setOrder }) {
+import { forwardRef } from "react";
+export default forwardRef(function Candles({ setOrder }, ref) {
 
     // const formCandles = candles.filter((candle) => {
     //     return candle.type.includes("form");
@@ -14,7 +15,7 @@ export default function Candles({ setOrder }) {
     // });
 
     return (
-        <section className="landing__candles">
+        <section ref={ref} className="landing__candles">
             <div className="container">
                 <h2 className="landing__candles-headline">Какой аромат подходит Вам?</h2>
                 <div className="landing__candles-type">
@@ -26,7 +27,6 @@ export default function Candles({ setOrder }) {
                         {containerCandles.map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
                                 <Candle setOrder={setOrder} candle={candle} />
-
                             </li>
                         })}
                     </ul>
@@ -34,7 +34,6 @@ export default function Candles({ setOrder }) {
                         {smallContainerCandles.map((candle) => {
                             return <li className="landing__goods-ul-li" key={candle.name}>
                                 <Candle setOrder={setOrder} candle={candle} />
-
                             </li>
                         })}
                     </ul>
@@ -75,4 +74,4 @@ export default function Candles({ setOrder }) {
             </div>
         </section>
     )
-}
+})

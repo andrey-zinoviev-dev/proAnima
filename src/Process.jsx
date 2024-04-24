@@ -1,6 +1,9 @@
 import "./Process.css";
 import process from "./assets/process.jpg";
-import video from "./assets/IMG_1482.MOV"
+import qrcode from "./assets/frame.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 export default function Process () {
     return (
         <section className="process">
@@ -18,7 +21,11 @@ export default function Process () {
                         <p className="process__p">
                             Натуральные масла, используемые в создании ароматов, <span className="process__p-span">успокаивают</span> нервную систему, создают уют дома, а также наполняют дом <span className="process__p-span" >приятным</span> ароматом. 
                         </p>
-                        <a target="_blank" href="https://t.me/satiseyunova" className="process__button">Изучить</a>
+                        <a target="_blank" href="https://t.me/proanima_candles" className="process__button">
+                            <p>Изучить</p>
+                            <FontAwesomeIcon style={{rotate: "-45deg"}} icon={faArrowRight} />
+                        </a>
+                        <img id="qr-code" className="process__wrapper-text-qr" src={qrcode} />
                     </div>
 
                 </div>

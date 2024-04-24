@@ -1,4 +1,5 @@
-import { Link, useLocation } from "react-router-dom"
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { fragrances } from "./utils";
 import "./CandlePage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,12 +12,17 @@ export default function CandlePage({ setOrder }) {
     return state.name.includes(fragranceEl.name);
   });
 
+  const navigate = useNavigate();
   // console.log(fragrance);
+
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [])
 
   return (
     <section className="candle">
       <div className="container">
-        <Link className="candle__back" to="../">
+        <Link to={-1} className="candle__back">
           <div>
             <FontAwesomeIcon icon={faArrowLeft} />
           </div>
@@ -43,7 +49,8 @@ export default function CandlePage({ setOrder }) {
                 </li>
               </ul>
             </div>
-            <button onClick={() => {
+            <p className="candle__wrapper-content-price">{state.price} &#8381;</p>
+            <button className="candle__wrapper-content-btn" onClick={() => {
               setOrder((prevValue) => {
                 return [...prevValue, {...state, quantity: 1}]
               })

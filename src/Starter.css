@@ -39,15 +39,18 @@
 }
 
 .start__order-btn {
-  background-color: transparent;
-    color: #413f3f;
-    border: 2px solid #413f3f;
+  /* background-color: transparent; */
+    /* color: #413f3f; */
+    /* border: 2px solid #413f3f; */
     width: 160px;
     height: 45px;
     border-radius: 2px;
     font-weight: 700;
     font-size: 18px;
     transition: all 0.25s ease-in-out;
+  background-color: #895330;
+  border: 2px solid #895330;
+  color: white;
 }
 
 .start__order-btn p {
@@ -55,11 +58,9 @@
 }
 
 .start__order-btn:hover {
-  /* background-color: #f9a581; */
-  /* border: 2px solid #f9a581; */
-  background-color: #895330;
   border: 2px solid #895330;
-  color: white;
+  background-color: transparent;
+  color: #895330;
 }
 
 @media screen and (max-width: 767px) {

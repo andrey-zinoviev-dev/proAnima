@@ -28,12 +28,43 @@
   text-align: left;
 }
 
+.process__wrapper-text a {
+  background-color: transparent;
+  color: #413f3f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 0;
+  padding: 7px 15px;
+  gap: 15px;
+  border: 2px solid #413f3f;
+  transition: all 0.25s ease-in-out;
+}
+
+.process__wrapper-text a {
+  background-color: transparent;
+  
+}
+
+.process__wrapper-text a:hover {
+  background-color: #895330;
+  border: 2px solid #895330;
+  color: white;
+}
+
 .process__p {
   font-weight: 300;
 }
 
 .process__p-span {
   color: #646cff;
+}
+
+#qr-code {
+  border: 2px solid black;
+  max-width: 90px;
+  border-radius: 0;
 }
 
 .process__video {

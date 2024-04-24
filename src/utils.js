@@ -13,6 +13,11 @@ import form1 from "./assets/13.png";
 import form2 from "./assets/14.png";
 import form3 from "./assets/15.png";
 
+import sasche1 from "./assets/18.png";
+import sasche2 from "./assets/19.png";
+import sasche3 from "./assets/20.png";
+import sasche4 from "./assets/21.png";
+
 // import good5 from "./assets/14.png";
 // import good6 from "./assets/15.png";
 // import good4 from "./assets/_DSC3843.JPG";
@@ -37,25 +42,29 @@ export const containerCandles = [
         name: "Манго-базилик",
         cover: good1,
         type: "container candle",
-        size: 250
+        size: 250,
+        price: 1600,
     },
     {
         name: "Ваниль-пачули",
         cover: good2,
         type: "container candle",
         size: 250,
+        price: 1600,
     },
     {
         name: "Жасмин",
         cover: good3,
         type: "container",
         size: 250,
+        price: 1600,
     },
     {
         name: "Пало-Санто",
         cover: santoBig,
         type: "container",
         size: 250,
+        price: 1600,
     }
 ]
 
@@ -64,25 +73,29 @@ export const smallContainerCandles = [
         name: "Свеча Манго-базилик",
         cover: smallMango,
         type: "container candle",
-        size: 190
+        size: 190,
+        price: 1200,
     },
     {
         name: "Свеча Ваниль-пачули",
         cover: smallVanilla,
         type: "container candle",
         size: 190,
+        price: 1200,
     },
     {
         name: "Свеча Жасмин",
         cover: smallJasmin,
         type: "container",
-        size: 190
+        size: 190,
+        price: 1200,
     },
     {
         name: "Пало-Санто",
         cover: smallPaloSanto,
         type: "container",
-        size: 190
+        size: 190,
+        price: 1200,
     },
 ];
 
@@ -90,40 +103,47 @@ export const formCandles = [
     {
         name: "Ягодный пунш",
         cover: form1,
-        type: "form"
+        type: "form",
+        price: 650,
     },
     {
         name: "Жасмин",
         cover: form2,
-        type: "form"
+        type: "form",
+        price: 650,
     },
     {
         name: "Ваниль-пачули",
         cover: form3,
-        type: "form"
+        type: "form",
+        price: 650,
     },
 ];
 
 export const sacheCandles = [
     {
         name: "Жасмин",
-        cover: good5,
-        type: "sasche"
+        cover: sasche1,
+        type: "sasche",
+        price: 200,
     },
     {
         name: "Ягодный пунш",
-        cover: good5,
-        type: "sasche"
+        cover: sasche2,
+        type: "sasche",
+        price: 200,
     },
     {
         name: "Ваниль-пачули",
-        cover: good5,
-        type: "sasche"
+        cover: sasche3,
+        type: "sasche",
+        price: 200,
     },
     {
         name: "Лаванда",
-        cover: good5,
+        cover: sasche4,
         type: "sasche",
+        price: 200,
     }
 ];
 

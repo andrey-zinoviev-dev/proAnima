@@ -72,8 +72,37 @@
     gap: 25px;
 }
 
+.candle__wrapper-content-price {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.candle__wrapper-content-btn {
+  background-color: #895330;
+  border: 2px solid #895330;
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+
+.candle__wrapper-content-btn:hover {
+  background-color: transparent;
+  border: 2px solid #895330;
+  color: #895330;
+}
+
 @media screen and (max-width: 1279px) {
   .candle__wrapper-content {
     padding: 0 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .candle__wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .candle__wrapper-content {
+    padding: 0 2%;
   }
 }

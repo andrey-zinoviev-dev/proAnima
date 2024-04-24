@@ -17,6 +17,7 @@ export default function Candle({ candle, setOrder }) {
             <div className="landing__goods-ul-li-article-wrapper">
                 <h3>{candle.name}</h3>
                 {candle.size && <p>Объем <span style={{fontWeight: 500}}>{`${candle.size}`}</span></p>}
+                <p style={{fontWeight: 700, letterSpacing: 1}}>{candle.price} &#8381;</p>
                 <button onClick={() => {
                     // setSelectedOrder(candle);
                     setOrder((prevValue) => {

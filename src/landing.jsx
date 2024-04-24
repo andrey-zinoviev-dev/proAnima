@@ -8,6 +8,11 @@ import OrderForm from "./OrderForm";
 import Notification from "./Nofitifaction";
 import { AnimatePresence } from "framer-motion";
 export default function Landing({ order, setOrder, orderClicked, setOrderClicked }) {
+    //refs
+    const candlesRef = React.useRef();
+
+    //functions
+    
     //states
     // const [orderClicked, setOrderClicked] = React.useState(false);
     // const [order, setOrder] = React.useState([]);
@@ -26,12 +31,10 @@ export default function Landing({ order, setOrder, orderClicked, setOrderClicked
     // }, [order.length]);
     return (
         <>
-            <Starter 
-            // setOrderClicked={() => {
-            //     setOrderClicked(true);
-            // }} 
-            />
-            <Candles setOrder={setOrder}/>
+            <Starter scrollToCandles={() => {
+                candlesRef.current.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+            }}/>
+            <Candles ref={candlesRef} setOrder={setOrder}/>
             <Process />
             <FAQ />
             <LastAction />
